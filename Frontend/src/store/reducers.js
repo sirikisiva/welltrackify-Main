@@ -10,8 +10,6 @@ import Login from "./auth/login/reducer"
 import Account from "./auth/register/reducer"
 import ForgetPassword from "./auth/forgetpwd/reducer"
 import Profile from "./auth/profile/reducer"
-//chat
-import chat from "./chat/reducer";
 
 //Calendar
 import calendar from "./calendar/reducer"
@@ -30,7 +28,6 @@ const rootReducer = combineReducers({
   ForgetPassword,
   Profile,
   calendar,
-  chat,
 })
 
 export default rootReducer

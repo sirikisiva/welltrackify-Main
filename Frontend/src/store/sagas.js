@@ -7,7 +7,6 @@ import ForgetSaga from "./auth/forgetpwd/saga"
 import ProfileSaga from "./auth/profile/saga"
 import LayoutSaga from "./layout/saga"
 import calendarSaga from "./calendar/saga"
-import chatSaga from "./chat/saga";
 import tasksSaga from "./tasks/saga"
 
 
@@ -20,7 +19,6 @@ export default function* rootSaga() {
     ForgetSaga(),
     LayoutSaga(),
     fork(calendarSaga),
-    fork(chatSaga),
     fork(tasksSaga),
     fork(tasksSaga)
   ])
