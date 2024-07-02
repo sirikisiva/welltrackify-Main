@@ -5,7 +5,7 @@ import accessToken from "../jwt-token-access/accessToken"
 import {
   calenderDefaultCategories,
   events,
-  chats, messages, contacts, groups,
+  // chats, messages, contacts, groups,
   tasks
 } from "../../common/data"
 
@@ -269,12 +269,12 @@ const fakeBackend = () => {
   mock.onGet(url.GET_CHATS).reply(() => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (chats) {
-          // Passing fake JSON data as response
-          resolve([200, chats])
-        } else {
-          reject([400, "Cannot get chats"])
-        }
+        // if (chats) {
+        //   // Passing fake JSON data as response
+        //   resolve([200, chats])
+        // } else {
+        //   reject([400, "Cannot get chats"])
+        // }
       })
     })
   })
@@ -282,12 +282,12 @@ const fakeBackend = () => {
   mock.onGet(url.GET_GROUPS).reply(() => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (groups) {
-          // Passing fake JSON data as response
-          resolve([200, groups])
-        } else {
-          reject([400, "Cannot get groups"])
-        }
+        // if (groups) {
+        //   // Passing fake JSON data as response
+        //   resolve([200, groups])
+        // } else {
+        //   reject([400, "Cannot get groups"])
+        // }
       })
     })
   })
@@ -295,12 +295,12 @@ const fakeBackend = () => {
   mock.onGet(url.GET_CONTACTS).reply(() => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (contacts) {
-          // Passing fake JSON data as response
-          resolve([200, contacts])
-        } else {
-          reject([400, "Cannot get contacts"])
-        }
+        // if (contacts) {
+        //   // Passing fake JSON data as response
+        //   resolve([200, contacts])
+        // } else {
+        //   reject([400, "Cannot get contacts"])
+        // }
       })
     })
   })
@@ -308,15 +308,15 @@ const fakeBackend = () => {
   mock.onGet(new RegExp(`${url.GET_MESSAGES}/*`)).reply(config => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (messages) {
-          // Passing fake JSON data as response
-          const { params } = config;
-          const filteredMessages = messages.filter(
-            msg => msg.roomId === params.roomId)
-          resolve([200, filteredMessages])
-        } else {
-          reject([400, "Cannot get messages"])
-        }
+        // if (messages) {
+        //   // Passing fake JSON data as response
+        //   const { params } = config;
+        //   const filteredMessages = messages.filter(
+        //     msg => msg.roomId === params.roomId)
+        //   resolve([200, filteredMessages])
+        // } else {
+        //   reject([400, "Cannot get messages"])
+        // }
       })
     })
   })
